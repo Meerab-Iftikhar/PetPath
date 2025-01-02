@@ -1,0 +1,69 @@
+/* Ensure body and html occupy full viewport height */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Full window background image */
+.contact-us-container {
+    background-size: cover; /* Ensure the image covers the entire background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    position: relative;
+}
+
+/* Add a semi-transparent overlay for better text visibility */
+.contact-us-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(132, 44, 44, 0.834); /* Black overlay with 50% transparency */
+    z-index: 0; /* Ensure this is behind the text */
+}
+
+/* Content section to center everything */
+.contact-us-content {
+    color: white; /* White text for contrast */
+    padding: 20px;
+    max-width: 800px; /* Limit content width */
+    z-index: 1; /* Ensure this is above the overlay */
+    position: relative; /* Position relative to stack above the overlay */
+}
+
+/* Heading styling */
+.contact-us-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Info section styling */
+.contact-us-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.contact-us-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Optional: Style the text color and spacing */
+.contact-us-info {
+    font-family: Arial, sans-serif;
+}
+
+/* Footer or any extra content at the bottom */
+.contact-us-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #777;
+}

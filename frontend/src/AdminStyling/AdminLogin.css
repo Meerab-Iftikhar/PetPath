@@ -1,0 +1,63 @@
+/* Background color */
+.maindiv{
+    background-color: #fbd7d7; /* Orange background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Login Container */
+  .login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Title */
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  /* Input Styles */
+  input[type="text"],
+  input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Error Message */
+  .error {
+    color: red;
+    margin-bottom: 15px;
+  }
+  
+  /* Login Button */
+  .login-btn {
+    background-color: #d65656;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .login-btn:hover {
+    background-color: #a53838; /* Darker orange on hover */
+  }
+  

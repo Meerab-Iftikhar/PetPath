@@ -1,0 +1,64 @@
+.footer {
+    background-color: #f4f0f0; /* Light grayish background */
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .footer-content p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .social-links {
+    margin: 10px 0;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #0073b1; /* LinkedIn-like blue color */
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  
+  .social-links a:hover {
+    color: #005582; /* Darker blue for hover effect */
+  }
+  
+  .social-links span {
+    color: #666;
+    margin: 0 5px;
+  }
+  
+  .social-links i {
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  
+  .footer-content p:last-of-type {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #999;
+  }
+  

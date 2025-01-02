@@ -1,0 +1,156 @@
+/* General Styling for the services page */
+.services-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  /* Services Content */
+  .services-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Left Side - Adopt a Pet Section */
+  .left-div {
+    width: 45%;
+    padding: 20px;
+    background-color: #e29b9b;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .left-div h2 {
+    font-size: 30px;
+    color: rgb(187, 74, 74);
+  }
+  
+  .left-div img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 20px 0;
+  }
+  
+  .info-section {
+    margin-bottom: 20px;
+  }
+  
+  .info-section h3 {
+    font-size: 22px;
+    color: rgb(187, 74, 74);
+  }
+  
+  .info-section p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .find-pet-button button {
+    background-color: rgb(187, 74, 74);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Font size updated */
+  }
+  
+  .find-pet-button button:hover {
+    background-color: rgb(187, 74, 74);
+  }
+  
+  /* Right Side - Post a Pet Section */
+  .right-div {
+    width: 45%;
+    padding: 20px;
+    background-color:  #e29b9b;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .right-div h2 {
+    font-size: 30px;
+    color: rgb(187, 74, 74);
+  }
+  
+  .right-div img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 20px 0;
+  }
+  
+  /* Form Styling */
+  .pet-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pet-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: rgb(187, 74, 74); /* Change label color */
+  }
+  
+  .pet-form input,
+  .pet-form select,
+  .pet-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Increased border size for picture input */
+  .pet-form input[type="file"] {
+    border: 2px solid #ddd; /* Increased border size */
+    background-color: white; /* Set background color to white */
+  }
+  
+  /* Make dropdown menu size consistent with other input fields */
+  .pet-form select {
+    padding: 10px; /* Match padding with input fields */
+    border: 1px solid #ddd; /* Ensure consistent border */
+    width: 80%; /* Make it the same width as other input fields */
+  }
+  
+  /* Submit Your Pet button adjustments */
+  .submit-button button {
+    width: 100%;
+    padding: 10px 20px; /* Same padding as Find Your Perfect Pet button */
+    background-color: rgb(187, 74, 74);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Same font size as Find Your Perfect Pet button */
+    text-align: center;
+  }
+  
+  .submit-button button:hover {
+    background-color: rgb(187, 74, 74);
+  }
+  
+  /* Submit Button Styling */
+  .submit-button {
+    margin-top: 20px;
+  }
+  
+  .submit-button button {
+    width: 100%;
+    padding: 10px 20px; /* Adjust padding to match */
+    background-color: rgb(187, 74, 74);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Matching font size */
+  }
+  
+  .submit-button button:hover {
+    background-color: rgb(187, 74, 74);
+  }

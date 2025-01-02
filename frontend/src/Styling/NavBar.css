@@ -1,0 +1,79 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #e29b9b; /* White background */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
+    position: relative;
+  }
+  
+  /* Logo section */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the logo image and text */
+  }
+  
+  .navbar-logo img {
+    height: 80px; /* Logo height */
+  }
+  
+  .navbar-logo span {
+    font-size: 40px;
+    font-weight: bold;
+    color: #dd3737; /* Dark gray for the text */
+  }
+  
+  /* Navigation links */
+  .navbar-links {
+    display:flex;
+    list-style: none; /* Remove bullet points */
+    gap: 30px; /* Space between links */
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .navbar-links .nav-item {
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    font-weight: normal;
+    color: #333; /* Dark gray for the text */
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links .nav-item:hover {
+    color: rgb(202, 61, 73); /* Change text color to orange on hover */
+  }
+
+
+  .navbar-links .active {
+    color:rgb(202, 61, 73); /* Highlight color */
+    font-weight: bold; /* Optional: Make it bold */
+    border-bottom: 2px solid rgb(202, 61, 73);; /* Optional: Add an underline */
+  }
+  
+  /* Button section */
+  .navbar-button {
+    position: absolute;
+    top: 30px;
+    right: 50px; 
+}
+  
+  .navbar-button button {
+    padding: 10px 20px;
+    background-color: rgb(187, 74, 74);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-button button:hover {
+    background-color: #ec8888; 
+  }
+  

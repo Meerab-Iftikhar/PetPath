@@ -1,0 +1,79 @@
+/* AllAdopted.css */
+.main-content {
+    margin-left: 400px; /* Offset for the AdminNav sidebar width */
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh; /* Ensure the content covers the full viewport height */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  header h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #2c3e50;
+  }
+  
+  header .date {
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .pet-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .pet-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .pet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .pet-details {
+    padding: 15px;
+  }
+  
+  .pet-details h4 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #34495e;
+  }
+  
+  .pet-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .pet-details .delete {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .pet-details .delete:hover {
+    background-color: #c0392b;
+  }
+  
