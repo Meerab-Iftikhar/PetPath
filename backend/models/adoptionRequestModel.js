@@ -49,7 +49,12 @@ const adoptionRequestSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now,
+    },
+    extra:{
+        type: String,
+        required: true,
     }
+    
 });
 
 // Create and export the model based on the schema

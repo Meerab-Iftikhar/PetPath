@@ -28,6 +28,7 @@ router.post('/submit-adoption', async (req, res) => {
       email: req.body.email,
       additionalMessage: req.body.additionalMessage,
       petImage: petImageUrl, // Save the Cloudinary URL of the pet image
+      extra: req.body.extra,
     });
 
     // Save the new adoption request to the database
@@ -93,21 +94,6 @@ router.delete('/reject-adoption/:id', async (req, res) => {
   }
 });
 
-router.get('/get-adoption-requests', async (req, res) => {
-  try {
-      // Retrieve all adoption requests from the database
-      const adoptionRequests = await AdoptionRequest.find(); // Assuming you use MongoDB
-      
-      // Return the data in the proper format
-      res.json({
-          success: true,
-          adoptionRequests: adoptionRequests
-      });
-  } catch (err) {
-      console.error("Error fetching adoption requests:", err);
-      res.status(500).json({ success: false, message: "Failed to fetch adoption requests" });
-  }
-});
 
 
 // Route to get all approved pets

@@ -57,6 +57,8 @@ const Services = () => {
       email: event.target.email.value,
       additionalMessage: event.target.additionalMessage.value,
       petImage: uploadedImageUrl,  // Ensure this is the correct URL
+      extra: event.target.extra.value,
+      
     };
 
     console.log('Form Data:', formData);
@@ -123,7 +125,6 @@ const Services = () => {
             <label>Picture:</label>
             <input type="file" name="petImage" required />
 
-
             <label>Type:</label>
             <select name="petType" required>
               <option value="Dog">Dog</option>
@@ -141,6 +142,9 @@ const Services = () => {
 
             <label>Phone Number:</label>
             <input type="tel" name="contactNumber" required />
+
+            <label>extra:</label>
+            <input type="string" name="extra" required/>
 
             <div className="submit-button">
               <button type="submit">Submit Your Pet</button>

@@ -10,6 +10,7 @@ const PetCard = ({ pet, onInterestClick }) => {
         <p><strong>Type:</strong> {pet.petType}</p>
         <p><strong>Age:</strong> {pet.age} years</p>
         <p><strong>Contact:</strong> {pet.contactNumber}</p>
+        <p><strong>extra:</strong>{pet.extra}</p>
         <button className="show-interest-button" onClick={() => onInterestClick(pet)}> Show Interest 🐾 </button>
       </div>
     </div>
