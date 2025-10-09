@@ -23,9 +23,8 @@ app.use(express.urlencoded({extended:true}));
 
 dbConnection();
 
-app.use("/", adoptionRoutes); 
-app.use("/", adoptingRoutes); 
-// app.use('/api/adoption', adoptionRoutes);  
+app.use("/api/adoption", adoptionRoutes);
+app.use("/api/adopting", adoptingRoutes); 
 
 app.use(errorMiddleware)  
  
