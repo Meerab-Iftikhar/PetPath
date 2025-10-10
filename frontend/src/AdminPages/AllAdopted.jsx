@@ -9,7 +9,7 @@ const AllAdopted = () => {
     useEffect(() => {
         const fetchAdoptedRequests = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/adoption/get-adoption-requests');
+                const response = await axios.get('http://13.201.98.216:4000/api/adoption/get-adoption-requests');
                 console.log("API Response:", response.data.adoptionRequest); // Log the response to check the data structure
                 // Filter for adopted requests
                 const adopted = response.data.adoptionRequests.filter(request => request.status === 'Adopted');

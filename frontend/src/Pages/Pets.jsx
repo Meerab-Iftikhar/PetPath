@@ -29,7 +29,7 @@ const Pets = () => {
   useEffect(() => {
     const fetchApprovedPets = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/adoption/get-approved-pets');
+        const response = await axios.get('http://13.201.98.216:4000/api/adoption/get-approved-pets');
         setApprovedPets(response.data.approvedPets);
       } catch (error) {
         console.log('Error fetching approved pets:', error);
@@ -66,7 +66,7 @@ const Pets = () => {
     const data = { ...adoptionData, petId };
 
     try {
-      const response = await axios.post('http://localhost:4000/api/adopting/submit-adoption-request', data);
+      const response = await axios.post('http://13.201.98.216:4000/api/adopting/submit-adoption-request', data);
       console.log('Adoption Request Submitted:', response.data);
       alert('Adoption request submitted successfully!');
       closePopup();
