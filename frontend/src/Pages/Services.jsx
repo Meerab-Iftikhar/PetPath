@@ -65,7 +65,7 @@ const Services = () => {
 
     // Send the form data to the backend
     try {
-      const response = await fetch('http://3.111.51.68:4000/api/adoption/submit-adoption', {
+      const response = await fetch('http://3.111.51.68:5000/api/adoption/submit-adoption', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

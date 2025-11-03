@@ -66,7 +66,7 @@ const Pets = () => {
     const data = { ...adoptionData, petId };
 
     try {
-      const response = await axios.post('http://3.111.51.68:4000/api/adopting/submit-adoption-request', data);
+      const response = await axios.post('http://3.111.51.68:5000/api/adopting/submit-adoption-request', data);
       console.log('Adoption Request Submitted:', response.data);
       alert('Adoption request submitted successfully!');
       closePopup();

@@ -9,7 +9,7 @@ const AdoptionReq = () => {
   useEffect(() => {
     const fetchAdoptionRequests = async () => {
       try {
-        const response = await axios.get('http://3.111.51.68:4000/api/adopting/adoption-requests');
+        const response = await axios.get('http://3.111.51.68:5000/api/adopting/adoption-requests');
         console.log('Fetched Requests:', response.data); // Log response data
         setAdoptionRequests(response.data);
       } catch (error) {
@@ -24,7 +24,7 @@ const AdoptionReq = () => {
   // Handle reject request
   const handleReject = async (id) => {
     try {
-      await axios.delete(`http://3.111.51.68:4000/api/adopting/adoption-requests/${id}`);
+      await axios.delete(`http://3.111.51.68:5000/api/adopting/adoption-requests/${id}`);
       setAdoptionRequests((prevRequests) =>
         prevRequests.filter((request) => request._id !== id)
       );
@@ -37,7 +37,7 @@ const AdoptionReq = () => {
   const handleApprove = async (id) => {
     console.log('Approving request with ID:', id); // Add this for debugging
     try {
-      const response = await axios.put(`http://3.111.51.68:4000/api/adopting/adoption-requests/${id}`, {
+      const response = await axios.put(`http://3.111.51.68:5000/api/adopting/adoption-requests/${id}`, {
         status: 'Adopted',
       });
       console.log('Approved:', response.data);
@@ -46,7 +46,7 @@ const AdoptionReq = () => {
           request._id === id ? { ...request, status: 'Adopted' } : request
         )
     );
-      await axios.delete(`http://3.111.51.68:4000/api/adopting/adoption-requests/${id}`);
+      await axios.delete(`http://3.111.51.68:5000/api/adopting/adoption-requests/${id}`);
       console.log('Approved: Request deleted successfully from the database');
       setAdoptionRequests((prevRequests) =>
         prevRequests.filter((request) => request._id !== id)
