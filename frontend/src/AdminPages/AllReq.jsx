@@ -8,7 +8,7 @@ const AllReq = () => {
     useEffect(() => {
         const fetchPendingRequests = async () => {
             try {
-                const response = await axios.get('http://13.201.98.216:4000/api/adoption/get-adoption-requests');
+                const response = await axios.get('http://3.111.51.68:4000/api/adoption/get-adoption-requests');
                 const adoptionRequests = response.data.adoptionRequests || [];
                 setPendingRequests(adoptionRequests.filter(request => request.status === 'Pending'));
             } catch (error) {
@@ -21,7 +21,7 @@ const AllReq = () => {
 
     const handleApprove = async (id) => {
         try {
-            await axios.put(`http://13.201.98.216:4000/api/adoption/approve-adoption/${id}`);
+            await axios.put(`http://3.111.51.68:4000/api/adoption/approve-adoption/${id}`);
             setPendingRequests(pendingRequests.filter(request => request._id !== id));
         } catch (error) {
             console.log("Error approving adoption:", error);
@@ -31,7 +31,7 @@ const AllReq = () => {
     const handleReject = async (id) => {
         try {
             if (!window.confirm("Are you sure you want to reject this request?")) return;
-            await axios.delete(`http://13.201.98.216:4000/api/adoption/reject-adoption/${id}`);
+            await axios.delete(`http://3.111.51.68:4000/api/adoption/reject-adoption/${id}`);
             setPendingRequests(pendingRequests.filter(request => request._id !== id));
         } catch (error) {
             console.log("Error rejecting adoption:", error);
