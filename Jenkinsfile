@@ -18,7 +18,8 @@ pipeline {
             steps {
                 script {
                     // Build and start containers in detached mode
-                    sh "docker-compose -f ${DOCKER_COMPOSE_FILE} up -d --build"
+                     sh "ls -l ${DOCKER_COMPOSE_FILE}"
+		     sh "docker-compose -f ${DOCKER_COMPOSE_FILE} up -d --build"
                 }
             }
         }
