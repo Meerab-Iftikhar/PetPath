@@ -65,7 +65,7 @@ const Services = () => {
 
     // Send the form data to the backend
     try {
-      const response = await fetch('http://43.204.231.18:8000/api/adoption/submit-adoption', {
+      const response = await fetch('${import.meta.env.VITE_API_URL}/api/adoption/submit-adoption', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
