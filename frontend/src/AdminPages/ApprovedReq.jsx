@@ -8,7 +8,7 @@ const ApprovedReq = () => {
     useEffect(() => {
         const fetchApprovedRequests = async () => {
             try {
-                const response = await axios.get('http://43.204.231.18:6000/api/adoption/get-adoption-requests');
+                const response = await axios.get('http://43.204.231.18:8000/api/adoption/get-adoption-requests');
                 const approved = response.data.adoptionRequests.filter(request => request.status === 'Approved');
                 setApprovedRequests(approved);
             } catch (error) {
@@ -27,7 +27,7 @@ const ApprovedReq = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://43.204.231.18:6000/api/adoption/reject-adoption/${id}`);
+            await axios.delete(`http://43.204.231.18:8000/api/adoption/reject-adoption/${id}`);
             setApprovedRequests(approvedRequests.filter(request => request._id !== id));
         } catch (error) {
             console.log("Error deleting pet:", error);
