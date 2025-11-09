@@ -18,6 +18,7 @@ pipeline {
             steps {
                 script {
                     // Build and start containers in detached mode
+		     echo "Current workspace: ${env.WORKSPACE}"	
                      sh "ls -l ${DOCKER_COMPOSE_FILE}"
 		     sh "docker-compose -f ${DOCKER_COMPOSE_FILE} up -d --build"
                 }
