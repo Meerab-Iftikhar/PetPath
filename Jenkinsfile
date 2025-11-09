@@ -8,27 +8,28 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'jenkins',
-                    url: 'https://github.com/Meerab-Iftikhar/Pet-Path.git',
-                    credentialsId: 'github-credentials'
+                checkout([$class: 'GitSCM',
+                    branches: [[name: 'jenkins']],
+                    userRemoteConfigs: [[
+                        url: 'https://github.com/Meerab-Iftikhar/Pet-Path.git',
+                        credentialsId: 'github-credentials'
+                    ]]
+                ])
             }
         }
 
         stage('Build & Run Containers') {
             steps {
-                script {
-                    // Build and start containers in detached mode
-		     echo "Current workspace: ${env.WORKSPACE}"	
-                     sh "ls -l ${DOCKER_COMPOSE_FILE}"
-		     sh "docker-compose -f ${DOCKER_COMPOSE_FILE} up -d --build"
+                dir("${env.WORKSPACE}") {   // make sure we're in the repo root
+                    sh "ls -l"
+                    sh "docker-compose -f ${DOCKER_COMPOSE_FILE} up -d --build"
                 }
             }
         }
 
         stage('Verify') {
             steps {
-                script {
-                    // Optional: show running containers
+                dir("${env.WORKSPACE}") {
                     sh "docker ps"
                 }
             }
@@ -41,3 +42,4 @@ pipeline {
         }
     }
 }
+
