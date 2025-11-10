@@ -19,7 +19,7 @@ services:
     build: ./frontend
     container_name: petpath-frontend-dev
     ports:
-      - "3001:3000"
+      - "3001:5173"
     depends_on:
       - backend
     restart: always
