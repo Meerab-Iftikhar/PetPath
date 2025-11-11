@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <div className="contact-us-container" style={{ backgroundImage: 'url(${backgroundImage})' }}>
       <div className="contact-us-content">
-        <h1 className="contact-us-heading">ContacttttJJJJJJJJ Uslls</h1>
+        <h1 className="contact-us-heading">ContacttttJJJJJHGHYGHJJJ Uslls</h1>
         <div className="contact-us-info">
           <h2>Our Office</h2>
           <p>123 Pet Haven Lane</p>
