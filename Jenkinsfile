@@ -19,7 +19,7 @@ pipeline {
                 echo 'Checking out code from Git...'
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/jenkins']],
+                    branches: [[name: '*/main']],
                     userRemoteConfigs: [[
                         url: 'https://github.com/Meerab-Iftikhar/PetPath.git',
                         credentialsId: 'github-credentials'
