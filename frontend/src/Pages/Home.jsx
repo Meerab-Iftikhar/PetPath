@@ -10,7 +10,7 @@ const Home = () => {
       <div class="body">
         <img src={assets.doggo} alt="" />
         <div class="p1">
-          <span>1.2k+ Furry Friends <br/> Living Their Best Lives</span>
+          <span>1.22k+ Furry Friends <br/> Living Their Best Lives</span>
           <img src={assets.house} alt="" />
         </div>
         <div class="p2">
