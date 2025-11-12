@@ -21,7 +21,7 @@ pipeline {
                     $class: 'GitSCM',
                     branches: [[name: '*/jenkins']],
                     userRemoteConfigs: [[
-                        url: 'https://github.com/Meerab-Iftikhar/Pet-Path.git',
+                        url: 'https://github.com/Meerab-Iftikhar/PetPath.git',
                         credentialsId: 'github-credentials'
                     ]],
                     extensions: [[$class: 'CloneOption', depth: 0, noTags: false, shallow: false]]
