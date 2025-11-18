@@ -1,2 +1,2 @@
 # Pet-Path
-A MERN stack pet adoption platformmmmmmmmmmmmmmmm
+A MERN stack pet adoption platformmmmmmm
